@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* リキッドレイアウト対応 */
 body {
-  font-family: "";
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .u-desktop {
@@ -29,10 +29,10 @@ html {
 }
 @media screen and (min-width: 768px) {
   html {
-    font-size: 1.4545454545vw;
+    font-size: 1.4414414414vw;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1110px) {
   html {
     font-size: 16px;
   }
@@ -182,7 +182,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .l-inner {
-    max-width: 1150px;
+    max-width: 1160px;
     padding-right: 25px;
     padding-left: 25px;
   }
