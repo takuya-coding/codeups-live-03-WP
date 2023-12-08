@@ -173,6 +173,60 @@ select::-ms-expand {
   display: none;
 }
 
+.l-archive-home {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-archive-home {
+    margin-top: 3.75rem;
+  }
+}
+
+.l-archive-works {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-archive-works {
+    margin-top: 4.375rem;
+  }
+}
+
+.l-company-info {
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-company-info {
+    margin-top: 8.75rem;
+  }
+}
+
+.l-company {
+  margin-top: 50px;
+  margin-top: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .l-company {
+    margin-top: 2.5rem;
+  }
+}
+
+.l-contact {
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-contact {
+    margin-top: 6.875rem;
+  }
+}
+
+.l-contact--mt0 {
+  margin-top: 0;
+}
+
 .l-inner {
   width: 100%;
   padding-right: 20px;
@@ -186,5 +240,78 @@ select::-ms-expand {
     padding-right: 25px;
     padding-left: 25px;
   }
+}
+
+.l-page-contact {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-page-contact {
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+  }
+}
+
+.l-page-service {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-page-service {
+    margin-top: 4.375rem;
+  }
+}
+
+.l-paginavi {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+
+.l-recruit {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-recruit {
+    margin-top: 4.375rem;
+  }
+}
+
+.l-service {
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-service {
+    margin-top: 8.75rem;
+  }
+}
+
+.l-single-body {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-single-body {
+    margin-top: 4.375rem;
+  }
+}
+
+.l-topNews {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .l-topNews {
+    margin-top: 4.375rem;
+  }
+}
+
+.l-works {
+  margin-top: 80px;
+  margin-top: 5rem;
 }
 /*# sourceMappingURL=styles.css.map */
