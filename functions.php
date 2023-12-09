@@ -34,9 +34,13 @@ add_action( 'after_setup_theme', 'my_setup' );
  */
 function my_script_init()
 {
-
+// css
 	wp_enqueue_style( 'style-css', get_template_directory_uri() . '/css/styles.css', array(), '1.0.1', 'all' );
-
+	wp_enqueue_style( 'swiper-css', '//unpkg.com/swiper@8/swiper-bundle.min.css', array(), '8.0.0', 'all' );
+	wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap', array(), '8.0.0', 'all' );
+// js
+	wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.6.0.js', array( 'jquery' ), '1.0.1', true );
+	wp_enqueue_script( 'swiper-js', '//unpkg.com/swiper@8/swiper-bundle.min.js', array( 'jquery' ), '1.0.1', true );
 	wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.0.1', true );
 
 }
