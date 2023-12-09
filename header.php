@@ -12,6 +12,7 @@
 </head>
 
 <?php
+$home = esc_url( home_url('/') );
 $news = esc_url( home_url('/news/') );
 $service = esc_url( home_url('/service/') );
 $works = esc_url( home_url('/works/') );
@@ -25,7 +26,7 @@ $contact = esc_url( home_url('/contact/') );
     <header class="l-header p-header">
         <div class="p-header__inner">
             <h1 class="p-header__logo">
-                <a href="" class="p-header__logoLink">CodeUps</a>
+                <a href="<?php echo $home; ?>" class="p-header__logoLink">CodeUps</a>
             </h1>
             <div class="p-header__drawer c-hamburger js-hamburger">
                 <span></span>
