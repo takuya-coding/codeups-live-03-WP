@@ -36,11 +36,7 @@
 </div>
 
 <div class="l-paginavi">
-    <div class="wp-pagenavi">
-        <span class="current">1</span>
-        <a class="page smaller" href="#">2</a>
-        <a class="page smaller" href="#">3</a>
-    </div>
+    <?php wp_pagenavi(); ?>
 </div>
 
 <?php get_footer(); ?>
