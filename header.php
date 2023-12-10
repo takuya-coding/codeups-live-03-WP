@@ -25,58 +25,67 @@ $contact = esc_url( home_url('/contact/') );
     <?php wp_body_open(); ?>
     <header class="l-header p-header">
         <div class="p-header__inner">
+            <?php if(is_front_page()): ?>
             <h1 class="p-header__logo">
-                <a href="<?php echo $home; ?>" class="p-header__logoLink">CodeUps</a>
+                <?php else: ?>
+                <div class="p-header__logo">
+                    <?php endif; ?>
+                    <a href="<?php echo $home; ?>" class="p-header__logoLink">CodeUps</a>
+                    <?php if(is_front_page()): ?>
             </h1>
-            <div class="p-header__drawer c-hamburger js-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="p-header__pc-nav pc-nav">
-                <ul class="pc-nav__items">
-                    <li class="pc-nav__item">
-                        <a href="<?php echo $news; ?>">NEWS</a>
-                    </li>
-                    <li class="pc-nav__item">
-                        <a href="<?php echo $service; ?>">SERVICE</a>
-                    </li>
-                    <li class="pc-nav__item">
-                        <a href="<?php echo $works; ?>">WORKS</a>
-                    </li>
-                    <li class="pc-nav__item">
-                        <a href="<?php echo $company; ?>">COMPANY</a>
-                    </li>
-                    <li class="pc-nav__item">
-                        <a href="<?php echo $recruit; ?>">RECRUIT</a>
-                    </li>
-                    <li class="pc-nav__item">
-                        <a href="<?php echo $contact; ?>">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="p-header__sp-nav sp-nav js-sp-nav">
-                <ul class="sp-nav__items">
-                    <li class="sp-nav__item">
-                        <a href="<?php echo $news; ?>">NEWS</a>
-                    </li>
-                    <li class="sp-nav__item">
-                        <a href="<?php echo $service; ?>">SERVICE</a>
-                    </li>
-                    <li class="sp-nav__item">
-                        <a href="<?php echo $works; ?>">WORKS</a>
-                    </li>
-                    <li class="sp-nav__item">
-                        <a href="<?php echo $company; ?>">COMPANY</a>
-                    </li>
-                    <li class="sp-nav__item">
-                        <a href="<?php echo $recruit; ?>">RECRUIT</a>
-                    </li>
-                    <li class="sp-nav__item">
-                        <a href="<?php echo $contact; ?>">CONTACT</a>
-                    </li>
-                </ul>
+            <?php else: ?>
+        </div>
+        <?php endif; ?>
+        <div class="p-header__drawer c-hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="p-header__pc-nav pc-nav">
+            <ul class="pc-nav__items">
+                <li class="pc-nav__item">
+                    <a href="<?php echo $news; ?>">NEWS</a>
+                </li>
+                <li class="pc-nav__item">
+                    <a href="<?php echo $service; ?>">SERVICE</a>
+                </li>
+                <li class="pc-nav__item">
+                    <a href="<?php echo $works; ?>">WORKS</a>
+                </li>
+                <li class="pc-nav__item">
+                    <a href="<?php echo $company; ?>">COMPANY</a>
+                </li>
+                <li class="pc-nav__item">
+                    <a href="<?php echo $recruit; ?>">RECRUIT</a>
+                </li>
+                <li class="pc-nav__item">
+                    <a href="<?php echo $contact; ?>">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="p-header__sp-nav sp-nav js-sp-nav">
+            <ul class="sp-nav__items">
+                <li class="sp-nav__item">
+                    <a href="<?php echo $news; ?>">NEWS</a>
+                </li>
+                <li class="sp-nav__item">
+                    <a href="<?php echo $service; ?>">SERVICE</a>
+                </li>
+                <li class="sp-nav__item">
+                    <a href="<?php echo $works; ?>">WORKS</a>
+                </li>
+                <li class="sp-nav__item">
+                    <a href="<?php echo $company; ?>">COMPANY</a>
+                </li>
+                <li class="sp-nav__item">
+                    <a href="<?php echo $recruit; ?>">RECRUIT</a>
+                </li>
+                <li class="sp-nav__item">
+                    <a href="<?php echo $contact; ?>">CONTACT</a>
+                </li>
+            </ul>
 
-            </nav>
+        </nav>
+        </div>
         </div>
     </header>
