@@ -8,6 +8,7 @@ $recruit = esc_url( home_url('/recruit/') );
 $contact = esc_url( home_url('/contact/') );
 ?>
 
+<?php if(!is_page('contact')): ?>
 <section class="l-contact p-contact">
     <div class="p-contact__inner l-inner">
         <div class="p-contact__title c-section-header">
@@ -24,6 +25,8 @@ $contact = esc_url( home_url('/contact/') );
         </div>
     </div>
 </section>
+<?php endif; ?>
+
 
 <div class="c-to-top">
     <a href="#top"><span></span></a>
