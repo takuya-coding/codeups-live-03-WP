@@ -11,11 +11,7 @@
 </div>
 
 <!-- パンくず -->
-<div class="c-breadcrumb">
-    <div class="l-inner">
-        <div>HOME > NEWS</div>
-    </div>
-</div>
+<?php get_template_part( 'breadcrumb' ); ?>
 
 <div class="l-archive-home p-archive-home">
     <div class="p-archive-home__inner l-inner">
