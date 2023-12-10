@@ -11,11 +11,7 @@
 </div>
 
 <!-- パンくず -->
-<div class="c-breadcrumb">
-    <div class="l-inner">
-        <div>HOME > COMPANY</div>
-    </div>
-</div>
+<?php get_template_part( 'breadcrumb' ); ?>
 
 
 <section class="p-company p-company--subPage">
