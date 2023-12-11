@@ -32,9 +32,12 @@
                 </div>
             </div>
         </div>
+        <?php if (has_post_thumbnail()): ?>
         <div class="p-single-body__image">
-            <img src="./images/common/catch.jpg" alt="">
+            <!-- 投稿にアイキャッチ画像が有る場合の処理 -->
+            <?php the_post_thumbnail(); ?>
         </div>
+        <?php endif; ?>
         <div class="p-single-body__content">
             <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
             </p>
