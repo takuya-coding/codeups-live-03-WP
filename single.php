@@ -46,14 +46,14 @@
             <div class="c-page-link__inner">
                 <div class="c-page-link__flex">
                     <div class="c-page-link__prev">
-                        <?php previous_post_link('&laquo; %link', '%title'); ?>
+                        <?php previous_post_link('%link', '%title'); ?>
                     </div>
                     <div class="c-page-link__next">
-                        <?php next_post_link('%link &raquo;', '%title'); ?>
+                        <?php next_post_link('%link', '%title'); ?>
                     </div>
                 </div>
                 <div class="c-page-link__archive">
-                    <a href="">NEWS一覧</a>
+                    <a href="<?php echo esc_url(home_url('/news/')); ?>">NEWS一覧</a>
                 </div>
             </div>
         </div>
