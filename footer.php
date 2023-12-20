@@ -9,7 +9,8 @@ $contact = esc_url( home_url('/contact/') );
 ?>
 
 <?php if(!is_page('contact')): ?>
-<section class="l-contact p-contact">
+<!-- リクルートページのみ上側の余白を無くすクラス（l-contact--mt0）を付与する条件分岐を記述 -->
+<section class="l-contact <?php if(is_post_type_archive('recruit')) { echo 'l-contact--mt0';} ?> p-contact">
     <div class="p-contact__inner l-inner">
         <div class="p-contact__title c-section-header">
             <h2 class="c-section-header__engtitle">CONTACT</h2>
