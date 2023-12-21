@@ -61,6 +61,9 @@
 }
 
 .p-page-recruit__item {
+  // WordPress化のところで追記
+  position: relative;
+
   border: 1px solid #B8AED5;
   border-radius: 10px;
   background-color: #FFFFFF;

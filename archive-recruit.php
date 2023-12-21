@@ -43,7 +43,8 @@
                 <!-- 募集中or募集停止どちらかによって表示、非表示を切り替える（真偽値による判定） -->
                 <?php $show = get_field('show'); ?>
                 <div class="p-page-recruit__item">
-                    <?php if($show): ?>
+                    <!-- 上側のレイヤーに「募集停止」のテキストを表示することなども可能 -->
+                    <?php if(!$show): ?>
                     <div class="c-hidden-recruit">募集停止</div>
                     <?php endif; ?>
 
