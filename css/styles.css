@@ -993,6 +993,9 @@ select::-ms-expand {
 .p-form__radio {
   margin-top: 5px;
   margin-top: 0.3125rem;
+}
+
+span.wpcf7-form-control.wpcf7-radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1004,9 +1007,25 @@ select::-ms-expand {
   gap: 0.3125rem;
 }
 @media screen and (min-width: 768px) {
-  .p-form__radio {
-    display: block;
+  span.wpcf7-form-control.wpcf7-radio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 0;
+  }
+}
+
+.p-form__radio .wpcf7-list-item {
+  margin-left: 0;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .p-form__radio .wpcf7-list-item {
+    display: inline-block;
   }
 }
 
