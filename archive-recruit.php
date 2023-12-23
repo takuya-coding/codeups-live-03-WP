@@ -45,7 +45,7 @@
                 <div class="p-page-recruit__item">
                     <!-- 上側のレイヤーに「募集停止」のテキストを表示することなども可能 -->
                     <?php if(!$show): ?>
-                    <div class="c-hidden-recruit">募集停止</div>
+                    <div class="c-hidden-recruit">募集終了</div>
                     <?php endif; ?>
 
                     <h3 class="p-page-recruit__job-title"><?php the_title(); ?></h3>

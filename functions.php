@@ -153,3 +153,29 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+
+
+// エディタ非表示
+function remove_wysiwyg() {
+  remove_post_type_support( 'recruit', 'editor' );
+  remove_post_type_support( 'page', 'editor' );
+}
+add_action( 'init', 'remove_wysiwyg' );
+
+
+// 投稿の名称変更
+// 必要なら動画を参考にコード記述
+
+
+// 表示件数変更
+add_action( 'pre_get_posts', 'my_custom_query_vars' );
+function my_custom_query_vars( $query ) {
+	/* @var $query WP_Query */
+	if ( !is_admin() && $query->is_main_query()) {
+		if ( is_post_type_archive('works') ) {
+			$query->set( 'posts_per_page' , -1 );//表示したい数
+		}
+	}
+	return $query;
+}
