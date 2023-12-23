@@ -1,4 +1,13 @@
 <?php get_header(); ?>
+<?php
+$home = esc_url( home_url('/') );
+$news = esc_url( home_url('/news/') );
+$service = esc_url( home_url('/service/') );
+$works = esc_url( home_url('/works/') );
+$company = esc_url( home_url('/company/') );
+$recruit = esc_url( home_url('/recruit/') );
+$contact = esc_url( home_url('/contact/') );
+?>
 
 <section class="l-mv p-mv js-mv-height">
     <div class="p-mv__inner">
@@ -6,14 +15,20 @@
             <h2 class="p-mv__title">WEB <br class="u-mobile">DESIGN <br class="u-mobile">SPECIALIST</h2>
             <p class="p-mv__subtitle">お客様の夢を叶える<br class="u-mobile">Webサイトを制作</p>
             <div class="p-mv__btn">
-                <a href="#" class="c-mv-btn">CONTACT</a>
+                <a href="<?php echo $contact; ?>" class="c-mv-btn">CONTACT</a>
             </div>
         </div>
         <div class="p-mv__scroll"><span>SCROLL</span></div>
     </div>
 </section>
 
-
+<?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3
+);  // カスタム投稿タイプ Products
+  $the_query = new WP_Query($args); if($the_query->have_posts()):
+?>
 <section class="l-topNews p-news">
     <div class="p-news__inner l-inner">
         <div class="p-news__title c-section-header c-section-header--left">
@@ -22,34 +37,21 @@
         </div>
         <div class="p-news__items">
             <!-- ループ処理開始 -->
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
             <div class="p-news__item p-news-content">
                 <div class="p-news-content__meta">
-                    <time datetime="2022-03-04" class="p-news-content__date">2022.3.4</time>
-                    <p class="p-news-content__category">お知らせ</p>
+                    <time datetime="<?php the_time('c') ?>"
+                        class="p-news-content__date"><?php the_time('Y.m.d') ?></time>
+                    <p class="p-news-content__category">
+                        <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
+                    </p>
                 </div>
                 <div class="p-news-content__link">
-                    <a href="" class="p-news-content__text">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a>
+                    <a href="<?php the_permalink(); ?>" class="p-news-content__text"><?php the_title(); ?></a>
                 </div>
             </div>
+            <?php endwhile; wp_reset_postdata(); endif; ?>
             <!-- ループ終了 -->
-            <div class="p-news__item p-news-content">
-                <div class="p-news-content__meta">
-                    <time datetime="2022-03-04" class="p-news-content__date">2022.3.4</time>
-                    <p class="p-news-content__category">お知らせ</p>
-                </div>
-                <div class="p-news-content__link">
-                    <a href="" class="p-news-content__text">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a>
-                </div>
-            </div>
-            <div class="p-news__item p-news-content">
-                <div class="p-news-content__meta">
-                    <time datetime="2022-03-04" class="p-news-content__date">2022.3.4</time>
-                    <p class="p-news-content__category">お知らせ</p>
-                </div>
-                <div class="p-news-content__link">
-                    <a href="" class="p-news-content__text">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</a>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -90,7 +92,7 @@
             </div>
         </div>
         <div class="p-service__btn">
-            <a href="#" class="c-button">more</a>
+            <a href="<?php echo $service; ?>" class="c-button">more</a>
         </div>
     </div>
 </section>
@@ -124,7 +126,7 @@
                     <p class="p-works__text">様々なジャンルのWebサイト制作が可能です。<br>ご購入やお申込み数の増加などを実現します！</p>
                 </div>
                 <div class="p-works__btn">
-                    <a href="#" class="c-button">more</a>
+                    <a href="<?php echo $works; ?>" class="c-button">more</a>
                 </div>
             </div>
         </div>
@@ -152,7 +154,7 @@
                 </p>
             </div>
             <div class="p-company__btn">
-                <a href="#" class="c-button">more</a>
+                <a href="<?php echo $company; ?>" class="c-button">more</a>
             </div>
         </div>
     </div>
@@ -172,7 +174,7 @@
                     <p class="p-recruit__text">私たちと一緒に働きませんか？</p>
                 </div>
                 <div class="p-recruit__btn">
-                    <a href="#" class="c-button">more</a>
+                    <a href="<?php echo $recruit; ?>" class="c-button">more</a>
                 </div>
             </div>
         </div>
