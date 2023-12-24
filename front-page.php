@@ -97,22 +97,32 @@ $contact = esc_url( home_url('/contact/') );
     </div>
 </section>
 
-
+<?php
+  $args = array(
+    'post_type' => 'works',
+    'posts_per_page' => -1
+);  // カスタム投稿タイプ Products
+  $the_query = new WP_Query($args); if($the_query->have_posts()):
+?>
 <section class="l-works p-works">
     <div class="p-works__inner l-inner">
         <div class="p-works__cotnent">
             <div class="p-works__images">
                 <div class="swiper js-works-swiper">
                     <div class="swiper-wrapper">
+                        <!-- ループ処理開始 -->
+                        <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
                         <div class="swiper-slide p-works__img">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/common/works_1.jpg" alt="">
+                            <?php if (has_post_thumbnail()): ?>
+                            <!-- 投稿にアイキャッチ画像が有る場合の処理 -->
+                            <?php the_post_thumbnail(); ?>
+                            <!-- アイキャッチ画像がない場合の処理 -->
+                            <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri() ?>/images/common/noimage.png" alt="">
+                            <?php endif; ?>
                         </div>
-                        <div class="swiper-slide p-works__img">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/common/service_1.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide p-works__img">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/common/service_2.jpg" alt="">
-                        </div>
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+                        <!-- ループ終了 -->
                     </div>
                 </div>
                 <div class="swiper-pagination js-works-pagination"></div>
